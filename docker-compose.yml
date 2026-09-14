@@ -1,8 +1,9 @@
 services:
-   level-5:
-    build: ./
+  web:
+    build: .
+    container_name: level5-app
+    ports:
+      - "3000:3000"
+    restart: always
     env_file:
       - .env
-    ports:
-      - 3000:50000
-    
